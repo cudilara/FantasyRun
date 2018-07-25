@@ -1,19 +1,15 @@
 package com.example.dilaramadinger.fantasyrun;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView mTextMessage;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -21,38 +17,44 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    ThemeChoiceFragment themeFragment = new ThemeChoiceFragment();
+                    FragmentTransaction themeFragTrans = getFragmentManager().beginTransaction();
+                    themeFragTrans.replace(R.id.myfrag, themeFragment);
+                    themeFragTrans.commit();
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    WearableFragment wearFragment = new WearableFragment();
+                    FragmentTransaction wearFragTrans = getFragmentManager().beginTransaction();
+                    wearFragTrans.replace(R.id.myfrag, wearFragment);
+                    wearFragTrans.commit();
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                    MyInfoFragment myInfoFragment = new MyInfoFragment();
+                    FragmentTransaction myInfoFragTrans = getFragmentManager().beginTransaction();
+                    myInfoFragTrans.replace(R.id.myfrag, myInfoFragment);
+                    myInfoFragTrans.commit();
                     return true;
             }
             return false;
         }
     };
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        // Button hook up
-        // https://developer.android.com/reference/android/widget/Button
-        final Button button = findViewById(R.id.button_id);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                Toast.makeText(getApplicationContext(), "Button pressed.",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+        // Use this line for coloring the bottom menu
+        // navigation.setBackgroundColor(getColor(R.color.colorPrimary));
+
+        ThemeChoiceFragment themeFragment = new ThemeChoiceFragment();
+        FragmentTransaction themeFragTrans = getFragmentManager().beginTransaction();
+        themeFragTrans.replace(R.id.myfrag, themeFragment);
+        themeFragTrans.commit();
     }
 
 }

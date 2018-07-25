@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">FantasyRun</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_run">Run</string>
+    <string name="title_wearable">Wearable</string>
+    <string name="title_myInfo">My Info</string>
+
+    <string name="theme_fragment">Theme fragment</string>
+    <string name="wearable_fragment">Wearable fragment</string>
+    <string name="my_info_fragment">My Info fragment</string>
+
+    <string name="theme_title">Theme</string>
+    <string name="wearable_title">Wearable</string>
+    <string name="my_info_title">My Info</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
