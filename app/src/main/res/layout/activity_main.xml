@@ -22,17 +22,6 @@
         tools:layout="@layout/fragment_theme_choice">
 
 
-
-        <Button
-            android:id="@+id/playMusic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="191dp"
-            android:text="Play Music"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.BottomNavigationView

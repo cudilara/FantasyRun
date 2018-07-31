@@ -54,16 +54,16 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_notifications:
-//                    MyInfoFragment myInfoFragment = new MyInfoFragment();
-//                    FragmentTransaction myInfoFragTrans = getFragmentManager().beginTransaction();
-//                    myInfoFragTrans.replace(R.id.myfrag, myInfoFragment);
-//                    myInfoFragTrans.commit();
-//                    return true;
-                    SampleFragment myInfoFragment = new SampleFragment();
+                    MyInfoFragment myInfoFragment = new MyInfoFragment();
                     FragmentTransaction myInfoFragTrans = getFragmentManager().beginTransaction();
                     myInfoFragTrans.replace(R.id.myfrag, myInfoFragment);
                     myInfoFragTrans.commit();
                     return true;
+//                    SampleFragment myInfoFragment = new SampleFragment();
+//                    FragmentTransaction myInfoFragTrans = getFragmentManager().beginTransaction();
+//                    myInfoFragTrans.replace(R.id.myfrag, myInfoFragment);
+//                    myInfoFragTrans.commit();
+//                    return true;
             }
             return false;
         }
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         //audio
         final MediaPlayer music = MediaPlayer.create(this, R.raw.autumnleavesjustpiano);
-        Button musicB = (Button) this.findViewById(R.id.playMusic);
+        //Button musicB = (Button) this.findViewById(R.id.playMusic);
 
         class MusicStatus{
             public String status;
@@ -97,20 +97,20 @@ public class MainActivity extends AppCompatActivity {
 
         final MusicStatus musicStatus = new MusicStatus();
 
-        musicB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(musicStatus.status == "paused"){
-                    music.start();
-                    musicStatus.status = "playing";
-                }
-                else{
-                    music.pause();
-                    musicStatus.status = "paused";
-                }
-
-            }
-        });
+//        musicB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(musicStatus.status == "paused"){
+//                    music.start();
+//                    musicStatus.status = "playing";
+//                }
+//                else{
+//                    music.pause();
+//                    musicStatus.status = "paused";
+//                }
+//
+//            }
+//        });
         //end audio
 
 
