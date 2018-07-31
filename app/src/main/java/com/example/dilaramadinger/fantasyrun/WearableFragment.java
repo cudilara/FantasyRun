@@ -46,6 +46,15 @@ public class WearableFragment extends Fragment {
                     sampleFragTrans.commit();
                 }
             });
+            final Button button2 = getView().findViewById(R.id.button2);
+            button2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    SampleFragment sampleFragment = new SampleFragment();
+                    FragmentTransaction sampleFragTrans = getFragmentManager().beginTransaction();
+                    sampleFragTrans.replace(R.id.myfrag, sampleFragment);
+                    sampleFragTrans.commit();
+                }
+            });
         }
     }
 }
