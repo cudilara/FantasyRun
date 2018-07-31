@@ -16,4 +16,89 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/my_info_message"
+        app:layout_constraintEnd_toEndOf="@+id/textViewAgeInput"
+        app:layout_constraintStart_toEndOf="@+id/textViewAgeInput"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textViewAgeInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/my_info_age"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/textViewAgeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAgeLabel" />
+
+    <TextView
+        android:id="@+id/textViewAgeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/my_info_age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/textViewWeightInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/my_info_weight"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/textViewHeightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeightLabel" />
+
+    <TextView
+        android:id="@+id/textViewWeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/my_info_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeightInput" />
+
+    <EditText
+        android:id="@+id/textViewHeightInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/my_info_height"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/textViewWeightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeightLabel" />
+
+    <TextView
+        android:id="@+id/textViewHeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/my_info_weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAgeInput" />
+
+    <Button
+        android:id="@+id/bSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeightInput" />
+
+    <TextView
+        android:id="@+id/savedIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bSubmit" />
+
 </android.support.constraint.ConstraintLayout>
