@@ -14,4 +14,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_info_message">Please enter your biometric data</string>
+    <string name="my_info_age">Age (Years)</string>
+    <string name="my_info_weight">Weight (lbs)</string>
+    <string name="my_info_height">Height (inches)</string>
 </resources>
