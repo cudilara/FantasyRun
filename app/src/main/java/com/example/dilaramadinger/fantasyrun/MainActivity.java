@@ -1,5 +1,8 @@
 package com.example.dilaramadinger.fantasyrun;
 
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +13,14 @@ import android.view.MenuItem;
 import android.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
+    private Location currentLocation = new Location("");
+    private LocationManager locationManager;
+    private LocationListener locationListener;
+
+    public Location getLocation(){
+        return currentLocation;
+    }
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
