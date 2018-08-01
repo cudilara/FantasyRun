@@ -11,6 +11,9 @@
     <string name="theme_title">Theme</string>
     <string name="wearable_title">Wearable</string>
     <string name="my_info_title">My Info</string>
+    <string name="scenario_title">Scenario</string>
+    <string name="run_title">Run</string>
+    <string name="summary_title">Summary</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -18,4 +21,22 @@
     <string name="my_info_age">Age (Years)</string>
     <string name="my_info_weight">Weight (lbs)</string>
     <string name="my_info_height">Height (inches)</string>
+
+    <string name="button_text_monsters">Monsters</string>
+    <string name="button_text_rings">Lord of the Rings</string>
+    <string name="button_text_potter">Harry Potter</string>
+    <string name="orcs_behind">The orcs are behind you...</string>
+    <string name="aragorn_ahead">Aragorn and the company are ahead...</string>
+    <string name="catch_up">Catch up with them!</string>
+    <string name="start_run">Start Run</string>
+    <string name="saved_myinfo_text">Info Saved</string>
+    <string name="submit">Submit</string>
+    <string name="pause">Pause</string>
+    <string name="end_run">End Run</string>
+    <string name="you_ran_so_much">You ran so much...</string>
+    <string name="orcs_are_behind">Orcs are behind.</string>
+    <string name="time">Time:</string>
+    <string name="you_got_tokens">You got ... tokens</string>
+    <string name="distance">Distance:</string>
+    <string name="paused">Paused</string>
 </resources>

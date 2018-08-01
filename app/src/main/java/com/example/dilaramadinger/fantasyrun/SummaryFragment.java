@@ -1,22 +1,20 @@
 package com.example.dilaramadinger.fantasyrun;
 
 
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class WearableFragment extends Fragment {
+public class SummaryFragment extends Fragment {
 
 
-    public WearableFragment() {
+    public SummaryFragment() {
         // Required empty public constructor
     }
 
@@ -25,19 +23,17 @@ public class WearableFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wearable, container, false);
+        return inflater.inflate(R.layout.fragment_summary, container, false);
     }
 
+
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         View view = getView();
-        if (view != null){
-            //Sets text for the title in the top of the app
-            String wearableTitle = getResources().getString(R.string.wearable_title);
-            getActivity().setTitle(wearableTitle);
-
-
+        if (view != null) {
+            String scenarioTitle = getResources().getString(R.string.summary_title);
+            getActivity().setTitle(scenarioTitle);
         }
     }
 }
