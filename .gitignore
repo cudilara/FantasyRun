@@ -61,3 +61,5 @@ output.json
 #NDK
 obj/
 .externalNativeBuild
+
+app.iml
