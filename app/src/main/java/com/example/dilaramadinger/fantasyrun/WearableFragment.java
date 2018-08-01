@@ -37,24 +37,7 @@ public class WearableFragment extends Fragment {
             String wearableTitle = getResources().getString(R.string.wearable_title);
             getActivity().setTitle(wearableTitle);
 
-            final Button button = getView().findViewById(R.id.button);
-            button.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    SampleFragment sampleFragment = new SampleFragment();
-                    FragmentTransaction sampleFragTrans = getFragmentManager().beginTransaction();
-                    sampleFragTrans.replace(R.id.myfrag, sampleFragment);
-                    sampleFragTrans.commit();
-                }
-            });
-            final Button button2 = getView().findViewById(R.id.button2);
-            button2.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    SampleFragment sampleFragment = new SampleFragment();
-                    FragmentTransaction sampleFragTrans = getFragmentManager().beginTransaction();
-                    sampleFragTrans.replace(R.id.myfrag, sampleFragment);
-                    sampleFragTrans.commit();
-                }
-            });
+
         }
     }
 }

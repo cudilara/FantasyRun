@@ -85,7 +85,7 @@ public class MyInfoFragment extends Fragment {
                     editor.apply();
 
                     saved = view.findViewById(R.id.savedIndicator);
-                    saved.setText("Info Saved");
+                    saved.setText(R.string.saved_myinfo_text);
                 }
             });
         }
