@@ -1,11 +1,13 @@
 package com.example.dilaramadinger.fantasyrun;
 
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 
 /**
@@ -34,6 +36,16 @@ public class SummaryFragment extends Fragment {
         if (view != null) {
             String scenarioTitle = getResources().getString(R.string.summary_title);
             getActivity().setTitle(scenarioTitle);
+
+            final ImageButton backButton = getView().findViewById(R.id.imageBackButtonSummary);
+            backButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    ThemeChoiceFragment themeFragment = new ThemeChoiceFragment();
+                    FragmentTransaction themeFragTrans = getFragmentManager().beginTransaction();
+                    themeFragTrans.replace(R.id.myfrag, themeFragment);
+                    themeFragTrans.commit();
+                }
+            });
         }
     }
 }

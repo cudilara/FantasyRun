@@ -7,14 +7,20 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
+import pl.droidsonroids.gif.GifTextView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class RunFragment extends Fragment {
+
     public RunFragment() {
         // Required empty public constructor
     }
@@ -24,6 +30,7 @@ public class RunFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_run, container, false);
     }
 
@@ -34,6 +41,16 @@ public class RunFragment extends Fragment {
         if (view != null) {
             String scenarioTitle = getResources().getString(R.string.run_title);
             getActivity().setTitle(scenarioTitle);
+
+            final ImageButton backButton = getView().findViewById(R.id.imageBackButtonRun);
+            backButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    ScenarioFragment scenarioFragment = new ScenarioFragment();
+                    FragmentTransaction scenFragTrans = getFragmentManager().beginTransaction();
+                    scenFragTrans.replace(R.id.myfrag, scenarioFragment);
+                    scenFragTrans.commit();
+                }
+            });
 
             final Button endRunButton = getView().findViewById(R.id.button_end_run);
             endRunButton.setOnClickListener(new View.OnClickListener() {
@@ -52,10 +69,12 @@ public class RunFragment extends Fragment {
                     if(pauseButton.getText().equals("Restart")){
                         pauseButton.setText("Pause");
                         endRunButton.setEnabled(true);
+                        backButton.setEnabled(true);
                         pausedTxt.setText("");
                     } else {
                         pauseButton.setText("Restart");
                         endRunButton.setEnabled(false);
+                        backButton.setEnabled(false);
                         pausedTxt.setText(getResources().getString(R.string.paused));
                     }
                 }

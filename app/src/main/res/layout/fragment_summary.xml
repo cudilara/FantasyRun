@@ -4,40 +4,70 @@
     android:id="@+id/frameLayout6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dilaramadinger.fantasyrun.SummaryFragment">
+    tools:context="com.example.dilaramadinger.fantasyrun.SummaryFragment"
+    tools:layout_editor_absoluteY="25dp">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="182dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginTop="79dp"
+        android:text="Theme"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageBackButtonSummary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageBackButtonSummary"
+        android:layout_width="63dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginStart="16dp"
         android:text="@string/distance"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBackButtonSummary" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="424dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="275dp"
+        android:layout_marginStart="16dp"
         android:text="@string/time"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="145dp"
+        android:layout_marginBottom="256dp"
         android:text="@string/you_got_tokens"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 </android.support.constraint.ConstraintLayout>

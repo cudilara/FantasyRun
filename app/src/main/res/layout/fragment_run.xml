@@ -4,37 +4,79 @@
     android:id="@+id/frameLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dilaramadinger.fantasyrun.RunFragment">
+    tools:context="com.example.dilaramadinger.fantasyrun.RunFragment"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="160dp"
+        android:text="Scenario"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBackButtonRun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageBackButtonRun"
+        app:layout_constraintTop_toTopOf="@+id/imageBackButtonRun" />
+
+    <ImageButton
+        android:id="@+id/imageBackButtonRun"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="235dp"
-        android:layout_height="197dp"
-        android:layout_marginTop="16dp"
-        android:src="@android:drawable/btn_star_big_on"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="193dp"
+        android:layout_height="171dp"
+        android:layout_marginBottom="138dp"
+        android:layout_marginTop="138dp"
+        android:src="@drawable/run"
+        app:layout_constraintBottom_toBottomOf="@+id/button_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/my_gif"
+        android:layout_width="193dp"
+        android:layout_height="171dp"
+        android:layout_marginBottom="138dp"
+        android:layout_marginTop="138dp"
+        android:background="@drawable/run"
+        app:layout_constraintBottom_toBottomOf="@+id/button_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="17dp"
         android:text="@string/orcs_are_behind"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintEnd_toStartOf="@+id/paused_textview"
+        app:layout_constraintStart_toStartOf="@+id/button_pause"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="43dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="17dp"
         android:text="@string/you_ran_so_much"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
@@ -51,7 +93,7 @@
         android:id="@+id/button_end_run"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="120dp"
         android:layout_marginEnd="42dp"
         android:text="@string/end_run"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,9 +101,12 @@
 
     <TextView
         android:id="@+id/paused_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        android:layout_width="97dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="69dp"
+        android:layout_marginTop="69dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView" />

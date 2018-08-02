@@ -8,14 +8,19 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.app.FragmentTransaction;
+
+import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity {
     private Location currentLocation = new Location("");
     private LocationManager locationManager;
     private LocationListener locationListener;
+    private Stack<Fragment> stack;
 
     public Location getLocation(){
         return currentLocation;
@@ -59,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
 
         // Use this line for coloring the bottom menu
         // navigation.setBackgroundColor(getColor(R.color.colorPrimary));

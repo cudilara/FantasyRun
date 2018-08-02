@@ -36,7 +36,9 @@
     <string name="you_ran_so_much">You ran so much...</string>
     <string name="orcs_are_behind">Orcs are behind.</string>
     <string name="time">Time:</string>
-    <string name="you_got_tokens">You got ... tokens</string>
+    <string name="you_got_tokens">You got 3 tokens!</string>
     <string name="distance">Distance:</string>
     <string name="paused">Paused</string>
+    <string name="theme">Theme</string>
+    <string name="you_will_get_3_tokens">You will get 3 tokens.</string>
 </resources>

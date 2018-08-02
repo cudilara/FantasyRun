@@ -5,23 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.dilaramadinger.fantasyrun.ScenarioFragment"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/orcs_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:text="@string/orcs_behind"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/aragorn_textview"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageBackButton" />
 
     <TextView
         android:id="@+id/aragorn_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/aragorn_ahead"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/catch_textview"
         app:layout_constraintStart_toStartOf="@+id/orcs_textview"
         app:layout_constraintTop_toBottomOf="@+id/orcs_textview" />
 
@@ -29,10 +33,11 @@
         android:id="@+id/catch_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="109dp"
         android:text="@string/catch_up"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aragorn_textview" />
@@ -41,10 +46,49 @@
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="111dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="113dp"
+        android:layout_marginEnd="33dp"
         android:text="@string/start_run"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catch_textview" />
+
+    <ImageButton
+        android:id="@+id/imageBackButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/orcs_textview"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="235dp"
+        android:text="Theme"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageBackButton"
+        app:layout_constraintTop_toTopOf="@+id/imageBackButton" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/you_will_get_3_tokens"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catch_textview" />
 
 </android.support.constraint.ConstraintLayout>
