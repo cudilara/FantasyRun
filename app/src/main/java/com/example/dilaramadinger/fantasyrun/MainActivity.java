@@ -24,10 +24,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends AppCompatActivity {
     private Location currentLocation = new Location("");
     private LocationManager locationManager;
     private LocationListener locationListener;
+    public SoundHandler soundHandler;
 
     //public method to get location from other fragments
     public Location getLocation(){
@@ -87,31 +91,18 @@ public class MainActivity extends AppCompatActivity {
         themeFragTrans.commit();
 
         //audio
-        final MediaPlayer music = MediaPlayer.create(this, R.raw.autumnleavesjustpiano);
+        final MediaPlayer runFaster = MediaPlayer.create(this, R.raw.run);
+        final MediaPlayer maintainSpeed = MediaPlayer.create(this, R.raw.whenhemeansto);
+        final MediaPlayer runSlower = MediaPlayer.create(this, R.raw.gallop);
+        soundHandler = new SoundHandler(runFaster, maintainSpeed, runSlower);
+
         //Button musicB = (Button) this.findViewById(R.id.playMusic);
 
-        class MusicStatus{
-            public String status;
-            public MusicStatus(){this.status = "paused";}
-        }
 
-        final MusicStatus musicStatus = new MusicStatus();
 
-//        musicB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(musicStatus.status == "paused"){
-//                    music.start();
-//                    musicStatus.status = "playing";
-//                }
-//                else{
-//                    music.pause();
-//                    musicStatus.status = "paused";
-//                }
-//
-//            }
-//        });
-        //end audio
+
+
+
 
 
 
@@ -123,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 //This method is called when there is an update to location
                 Log.d("Location",location.toString());
                 currentLocation = location;
+                soundHandler.locationUpdate(location);
             }
 
             @Override
@@ -165,6 +157,87 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    class SoundHandler{
+        public String status;
+        private MediaPlayer tooSlow;
+        private MediaPlayer justRight;
+        private MediaPlayer tooFast;
+        private boolean waiting = false;
+        private long timeInterval = 1000l;
+        Runnable runnable;
+
+
+
+
+
+        public SoundHandler(MediaPlayer tooSlow, MediaPlayer justRight, MediaPlayer tooFast){
+            this.status = "paused";
+            this.tooSlow = tooSlow;
+            this.justRight = justRight;
+            this.tooFast = tooFast;
+
+
+            runnable = new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(timeInterval);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    waiting = false;
+                }
+            };
+        }
+
+        private void locationUpdate(Location location){
+
+        }
+        public void pauseAllSounds(){
+            this.tooSlow.pause();
+            this.justRight.pause();
+            this.tooFast.pause();
+        }
+        public void startEffect(int effect){
+
+            //too slow
+            if(waiting != false) {
+                if (effect == 0) {
+                    this.tooSlow.start();
+                    waiting = true;
+                }
+                //just right
+                else if (effect == 1) {
+                    this.justRight.start();
+                    waiting = true;
+                }
+                //too fast
+                else {
+                    this.tooFast.start();
+                    waiting = true;
+                }
+            }
+            Thread thread = new Thread(runnable);
+            thread.start();
+        }
+    }
 
 
 }
+
+
+//        musicB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(musicStatus.status == "paused"){
+//                    music.start();
+//                    musicStatus.status = "playing";
+//                }
+//                else{
+//                    music.pause();
+//                    musicStatus.status = "paused";
+//                }
+//
+//            }
+//        });
+//end audio

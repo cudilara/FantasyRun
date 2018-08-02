@@ -1,0 +1,4 @@
+#Sat Jul 28 16:18:34 MDT 2018
+base.0=C\:\\Users\\Garrett Sippel\\Documents\\GitHub\\FantasyRun\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\48
+path.0=classes.dex
+renamed.0=classes.dex
