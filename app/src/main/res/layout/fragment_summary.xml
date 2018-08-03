@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.dilaramadinger.fantasyrun.SummaryFragment"
-    tools:layout_editor_absoluteY="25dp">
+    tools:layout_editor_absoluteY="25dp"
+    android:background="@drawable/gradient">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -26,7 +27,7 @@
         android:layout_width="67dp"
         android:layout_height="62dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/back_arrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

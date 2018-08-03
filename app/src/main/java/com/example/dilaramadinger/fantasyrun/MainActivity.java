@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Use this line for coloring the bottom menu
-        // navigation.setBackgroundColor(getColor(R.color.colorPrimary));
+         navigation.setBackgroundColor(getColor(R.color.colorBottomMenu));
 
         ThemeChoiceFragment themeFragment = new ThemeChoiceFragment();
         FragmentTransaction themeFragTrans = getFragmentManager().beginTransaction();
