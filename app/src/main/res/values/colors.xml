@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorTop">#424242</color>
-    <color name="colorScreenStart">#2f3e9e</color>
-    <color name="colorScreenEnd">#2f3e9e</color>
+    <color name="colorTop">#2f3e9e</color>
+    <color name="colorScreenStart">#6668d0</color>
+    <color name="colorScreenEnd">#6668d0</color>
     <color name="colorBottomMenu">#00186f</color>
 
     <color name="colorDarkGrey">#424242</color>
