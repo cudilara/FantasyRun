@@ -11,30 +11,23 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="182dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginTop="79dp"
+        android:layout_width="97dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="63dp"
         android:text="Theme"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageBackButtonSummary"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageBackButtonSummary"
-        android:layout_width="63dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="61dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="67dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="45dp"
         android:src="@drawable/back_arrow"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toStartOf="@+id/textView11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,32 +35,76 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/distance"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBackButtonSummary" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="275dp"
+        android:layout_width="112dp"
+        android:layout_height="25dp"
         android:layout_marginStart="16dp"
         android:text="@string/time"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="58dp"
+        android:text="@string/you_got_tokens"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="171dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:text="Calories spent: 105 cal. "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="315dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:text="Stayed in optimal heart rate zone: 75% of time."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/galandriel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="109dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="7dp"
+        android:text="Annon allen..."
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
-        android:text="@string/you_got_tokens"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="139dp"
+        android:text="I give you thanks."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 </android.support.constraint.ConstraintLayout>

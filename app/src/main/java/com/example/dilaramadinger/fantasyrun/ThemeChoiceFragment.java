@@ -9,12 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.util.Objects;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ThemeChoiceFragment extends Fragment {
-
+    String wearableState;
 
     public ThemeChoiceFragment() {
         // Required empty public constructor
@@ -43,6 +45,15 @@ public class ThemeChoiceFragment extends Fragment {
                     scenFragTrans.commit();
                 }
             });
+
+
+            Bundle bundle = getArguments();
+            if(bundle != null){
+                wearableState = bundle.getString("wearable");
+                if(Objects.equals(wearableState, "on")){
+
+                }
+            }
         }
     }
 }

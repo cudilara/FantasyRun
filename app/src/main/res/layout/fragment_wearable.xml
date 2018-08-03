@@ -6,4 +6,54 @@
     android:layout_height="match_parent"
     tools:context="com.example.dilaramadinger.fantasyrun.WearableFragment">
 
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="273dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="153dp"
+        android:text="@string/connect_your_wearable_device_via_bluetooth"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="341dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="211dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="126dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/data_from_wearable_fitness_tracker_will_be_used_to_calculate_the_perfect_zone_for_your_running"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConnected"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="342dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="16dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/your_data_will_not_be_shared_with_any_third_party_all_data_will_be_deleted_upon_request"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/buttonConnected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="95dp"
+        android:text="@string/connected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 </android.support.constraint.ConstraintLayout>

@@ -35,14 +35,12 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="193dp"
-        android:layout_height="171dp"
-        android:layout_marginBottom="138dp"
-        android:layout_marginTop="138dp"
+        android:layout_height="0dp"
         android:src="@drawable/run"
-        app:layout_constraintBottom_toBottomOf="@+id/button_pause"
+        app:layout_constraintBottom_toBottomOf="@+id/my_gif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/my_gif" />
 
     <pl.droidsonroids.gif.GifTextView
         android:id="@+id/my_gif"
@@ -51,63 +49,53 @@
         android:layout_marginBottom="138dp"
         android:layout_marginTop="138dp"
         android:background="@drawable/run"
-        app:layout_constraintBottom_toBottomOf="@+id/button_pause"
+        app:layout_constraintBottom_toTopOf="@+id/button_pause"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="17dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="119dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="119dp"
         android:text="@string/orcs_are_behind"
-        app:layout_constraintEnd_toStartOf="@+id/paused_textview"
-        app:layout_constraintStart_toStartOf="@+id/button_pause"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:text="@string/you_ran_so_much"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/paused_textview" />
 
     <Button
         android:id="@+id/button_pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="84dp"
         android:text="@string/pause"
-        app:layout_constraintBottom_toBottomOf="@+id/button_end_run"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button_end_run" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_end_run"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_end_run"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginStart="37dp"
         android:text="@string/end_run"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/button_pause" />
 
     <TextView
         android:id="@+id/paused_textview"
         android:layout_width="97dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="69dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginBottom="33dp"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

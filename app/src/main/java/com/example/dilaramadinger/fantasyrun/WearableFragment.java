@@ -37,7 +37,18 @@ public class WearableFragment extends Fragment {
             String wearableTitle = getResources().getString(R.string.wearable_title);
             getActivity().setTitle(wearableTitle);
 
-
+            final Button blueToothConnectedButton = getView().findViewById(R.id.buttonConnected);
+            blueToothConnectedButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    ThemeChoiceFragment themeFragment = new ThemeChoiceFragment();
+                    Bundle args = new Bundle();
+                    args.putString("wearable", "on");
+                    themeFragment.setArguments(args);
+                    FragmentTransaction themeFragTrans = getFragmentManager().beginTransaction();
+                    themeFragTrans.replace(R.id.myfrag, themeFragment);
+                    themeFragTrans.commit();
+                }
+            });
         }
     }
 }

@@ -17,7 +17,7 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="my_info_message">Please enter your biometric data</string>
+    <string name="my_info_message">Please enter your biometric data.</string>
     <string name="my_info_age">Age (Years)</string>
     <string name="my_info_weight">Weight (lbs)</string>
     <string name="my_info_height">Height (inches)</string>
@@ -34,11 +34,16 @@
     <string name="pause">Pause</string>
     <string name="end_run">End Run</string>
     <string name="you_ran_so_much">You ran so much...</string>
-    <string name="orcs_are_behind">Orcs are behind.</string>
-    <string name="time">Time:</string>
+    <string name="orcs_are_behind">Orcs are 0.5 miles behind you.</string>
+    <string name="time">Time: 42 min.</string>
     <string name="you_got_tokens">You got 3 tokens!</string>
-    <string name="distance">Distance:</string>
+    <string name="distance">Distance: 1.2 miles.</string>
     <string name="paused">Paused</string>
     <string name="theme">Theme</string>
     <string name="you_will_get_3_tokens">You will get 3 tokens.</string>
+    <string name="connect_your_wearable_device_via_bluetooth">Connect your wearable device via bluetooth.</string>
+    <string name="data_from_wearable_fitness_tracker_will_be_used_to_calculate_the_perfect_zone_for_your_running">Data from wearable fitness tracker will be used to calculate the perfect heart rate zone for your running.</string>
+    <string name="your_data_will_not_be_shared_with_any_third_party_all_data_will_be_deleted_upon_request">Your data will not be shared with any third-party. All data will be deleted upon request.</string>
+    <string name="connected">Connected</string>
+    <string name="data_will_be_used_for_calorie_spent_count">Data will be used for calorie spent count.</string>
 </resources>
