@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.Objects;
 
@@ -36,7 +37,7 @@ public class ThemeChoiceFragment extends Fragment {
             String themeTitle = getResources().getString(R.string.theme_title);
             getActivity().setTitle(themeTitle);
 
-            final Button button = getView().findViewById(R.id.button_rings);
+            final ImageButton button = getView().findViewById(R.id.imageButton3);
             button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     ScenarioFragment scenarioFragment = new ScenarioFragment();

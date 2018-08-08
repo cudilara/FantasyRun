@@ -14,7 +14,36 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:menu="@menu/top_bar">
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/toolbar_logo"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_gravity="left"/>-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/toolbar_title"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_marginRight="?attr/actionBarSize"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:visibility="gone"-->
+            <!--android:text="HERE"-->
+            <!--android:textColor="@color/colorYellow"-->
+            <!--style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" />-->
+
+        <!--</FrameLayout>-->
+    </android.support.v7.widget.Toolbar>
 
     <FrameLayout
         android:id="@+id/myfrag"

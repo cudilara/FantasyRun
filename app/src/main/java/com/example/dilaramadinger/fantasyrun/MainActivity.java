@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
+//        getSupportActionBar().setLogo(R.drawable.run_launch);
+//        getSupportActionBar().setIcon(R.drawable.run_launch);
+
         // Use this line for coloring the bottom menu
          navigation.setBackgroundColor(getColor(R.color.colorBottomMenu));
 
