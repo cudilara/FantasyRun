@@ -1,4 +1,4 @@
 # FantasyRun
 App that mixes running and fun!
 
-![video](demo.mp4)
+![Sample Video](demo.mp4)
