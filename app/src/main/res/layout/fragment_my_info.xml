@@ -4,9 +4,30 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context="com.example.dilaramadinger.fantasyrun.MyInfoFragment"
-    tools:layout_editor_absoluteY="25dp"
-    android:background="@drawable/gradient">
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/savedIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeightInput" />
+
+    <Button
+        android:id="@+id/bSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeightInput" />
 
     <TextView
         android:id="@+id/textView5"
@@ -18,11 +39,34 @@
         app:layout_constraintStart_toStartOf="@+id/textView16"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/data_will_be_used_for_calorie_spent_count"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAgeInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textViewAgeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/my_info_age"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
     <EditText
         android:id="@+id/textViewAgeInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="15dp"
         android:hint="@string/my_info_age"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/textViewHeightLabel"
@@ -30,19 +74,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
-        android:id="@+id/textViewAgeLabel"
+        android:id="@+id/textViewHeightLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:text="@string/my_info_age"
-        app:layout_constraintBottom_toTopOf="@+id/textViewAgeInput"
-        app:layout_constraintStart_toStartOf="@+id/textView16" />
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/my_info_weight"
+        app:layout_constraintBottom_toTopOf="@+id/textViewWeightInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAgeInput" />
 
     <EditText
         android:id="@+id/textViewWeightInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="10dp"
         android:hint="@string/my_info_weight"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/textViewWeightLabel"
@@ -53,66 +99,23 @@
         android:id="@+id/textViewWeightLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="51dp"
+        android:layout_marginBottom="221dp"
+        android:layout_marginStart="16dp"
         android:text="@string/my_info_height"
-        app:layout_constraintBottom_toTopOf="@+id/savedIndicator"
-        app:layout_constraintStart_toStartOf="@+id/textViewWeightInput"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewWeightInput" />
 
     <EditText
         android:id="@+id/textViewHeightInput"
         android:layout_width="wrap_content"
-        android:layout_height="51dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="18dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="176dp"
+        android:layout_marginTop="176dp"
         android:hint="@string/my_info_height"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/savedIndicator"
-        app:layout_constraintStart_toStartOf="@+id/textViewWeightLabel"
-        app:layout_constraintTop_toTopOf="@+id/textViewWeightLabel" />
-
-    <TextView
-        android:id="@+id/textViewHeightLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/my_info_weight"
-        app:layout_constraintBottom_toTopOf="@+id/textViewWeightInput"
-        app:layout_constraintStart_toStartOf="@+id/textViewAgeInput"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAgeInput" />
-
-    <Button
-        android:id="@+id/bSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/savedIndicator"
-        app:layout_constraintStart_toStartOf="@+id/savedIndicator"
-        app:layout_constraintTop_toBottomOf="@+id/savedIndicator" />
-
-    <TextView
-        android:id="@+id/savedIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/bSubmit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewWeightLabel" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="17dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:text="@string/data_will_be_used_for_calorie_spent_count"
-        app:layout_constraintBottom_toTopOf="@+id/textViewAgeInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/textViewWeightLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewAgeLabel" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,9 +4,9 @@
     android:id="@+id/frameLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context="com.example.dilaramadinger.fantasyrun.RunFragment"
-    tools:layout_editor_absoluteY="25dp"
-    android:background="@drawable/gradient">
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/textView2"
@@ -29,15 +29,15 @@
         android:layout_marginBottom="7dp"
         android:layout_marginStart="6dp"
         android:src="@drawable/back_arrow"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/imageUnder"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageUnder"
         android:layout_width="193dp"
         android:layout_height="0dp"
-        android:src="@drawable/run"
+        android:src="@drawable/pause_statues"
         app:layout_constraintBottom_toBottomOf="@+id/my_gif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,46 +57,53 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="0dp"
+        android:layout_width="302dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="119dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="119dp"
+        android:layout_marginBottom="69dp"
+        android:layout_marginTop="67dp"
         android:text="@string/orcs_are_behind"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_pause"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/paused_textview" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageUnder" />
 
     <Button
         android:id="@+id/button_pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginStart="43dp"
         android:text="@string/pause"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button_end_run"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_end_run"
+        app:layout_constraintStart_toStartOf="@+id/textView4" />
 
     <Button
         android:id="@+id/button_end_run"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginTop="21dp"
         android:text="@string/end_run"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_pause" />
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/paused_textview"
-        android:layout_width="97dp"
-        android:layout_height="69dp"
-        android:layout_marginBottom="33dp"
+        android:layout_width="173dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="17dp"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageUnder" />
 
 </android.support.constraint.ConstraintLayout>

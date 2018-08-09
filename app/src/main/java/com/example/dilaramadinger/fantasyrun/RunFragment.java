@@ -11,6 +11,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import pl.droidsonroids.gif.GifTextView;
@@ -42,6 +43,8 @@ public class RunFragment extends Fragment {
             String scenarioTitle = getResources().getString(R.string.run_title);
             getActivity().setTitle(scenarioTitle);
 
+            final GifTextView myGif = getView().findViewById(R.id.my_gif);
+
             final ImageButton backButton = getView().findViewById(R.id.imageBackButtonRun);
             backButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -66,16 +69,18 @@ public class RunFragment extends Fragment {
             pauseButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     TextView pausedTxt = getView().findViewById(R.id.paused_textview);
-                    if(pauseButton.getText().equals("Restart")){
+                    if(pauseButton.getText().equals("Resume")){
                         pauseButton.setText("Pause");
                         endRunButton.setEnabled(true);
                         backButton.setEnabled(true);
                         pausedTxt.setText("");
+                        myGif.setVisibility(View.VISIBLE);
                     } else {
-                        pauseButton.setText("Restart");
+                        pauseButton.setText("Resume");
                         endRunButton.setEnabled(false);
                         backButton.setEnabled(false);
                         pausedTxt.setText(getResources().getString(R.string.paused));
+                        myGif.setVisibility(View.INVISIBLE);
                     }
                 }
             });
