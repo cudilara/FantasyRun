@@ -42,7 +42,7 @@ public class SummaryFragment extends Fragment {
                 public void onClick(View v) {
                     ThemeChoiceFragment themeFragment = new ThemeChoiceFragment();
                     FragmentTransaction themeFragTrans = getFragmentManager().beginTransaction();
-                    themeFragTrans.replace(R.id.myfrag, themeFragment);
+                    themeFragTrans.replace(R.id.myfrag, themeFragment, "frag");
                     themeFragTrans.commit();
                 }
             });

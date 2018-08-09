@@ -50,7 +50,7 @@ public class RunFragment extends Fragment {
                 public void onClick(View v) {
                     ScenarioFragment scenarioFragment = new ScenarioFragment();
                     FragmentTransaction scenFragTrans = getFragmentManager().beginTransaction();
-                    scenFragTrans.replace(R.id.myfrag, scenarioFragment);
+                    scenFragTrans.replace(R.id.myfrag, scenarioFragment, "frag");
                     scenFragTrans.commit();
                 }
             });
@@ -60,7 +60,7 @@ public class RunFragment extends Fragment {
                 public void onClick(View v) {
                     SummaryFragment summaryFragment = new SummaryFragment();
                     FragmentTransaction summaryFragTrans = getFragmentManager().beginTransaction();
-                    summaryFragTrans.replace(R.id.myfrag, summaryFragment);
+                    summaryFragTrans.replace(R.id.myfrag, summaryFragment, "frag");
                     summaryFragTrans.commit();
                 }
             });

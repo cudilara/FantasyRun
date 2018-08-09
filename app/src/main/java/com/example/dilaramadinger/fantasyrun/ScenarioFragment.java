@@ -39,7 +39,7 @@ public class ScenarioFragment extends Fragment {
                 public void onClick(View v) {
                     RunFragment runFragment = new RunFragment();
                     FragmentTransaction runFragTrans = getFragmentManager().beginTransaction();
-                    runFragTrans.replace(R.id.myfrag, runFragment);
+                    runFragTrans.replace(R.id.myfrag, runFragment, "frag");
                     runFragTrans.commit();
                 }
             });
@@ -49,7 +49,7 @@ public class ScenarioFragment extends Fragment {
                 public void onClick(View v) {
                     ThemeChoiceFragment themeFragment = new ThemeChoiceFragment();
                     FragmentTransaction themeFragTrans = getFragmentManager().beginTransaction();
-                    themeFragTrans.replace(R.id.myfrag, themeFragment);
+                    themeFragTrans.replace(R.id.myfrag, themeFragment, "frag");
                     themeFragTrans.commit();
                 }
             });

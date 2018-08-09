@@ -42,7 +42,7 @@ public class ThemeChoiceFragment extends Fragment {
                 public void onClick(View v) {
                     ScenarioFragment scenarioFragment = new ScenarioFragment();
                     FragmentTransaction scenFragTrans = getFragmentManager().beginTransaction();
-                    scenFragTrans.replace(R.id.myfrag, scenarioFragment);
+                    scenFragTrans.replace(R.id.myfrag, scenarioFragment, "frag");
                     scenFragTrans.commit();
                 }
             });
